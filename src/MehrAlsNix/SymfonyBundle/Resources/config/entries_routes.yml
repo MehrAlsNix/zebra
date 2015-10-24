@@ -1,0 +1,10 @@
+entry:
+    type:     rest
+    resource: MehrAlsNix\SymfonyBundle\Controller\EntriesController
+
+media:
+    type:     rest
+    parent: entry
+    resource: MehrAlsNix\SymfonyBundle\Controller\MediaController
+
+
