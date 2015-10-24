@@ -1,0 +1,33 @@
+{
+  "name": "mehr-als-nix/zebra",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Mattias Meiner",
+      "email": "mattias.meiner@gmail.com"
+    },
+    {
+      "name": "Siad Ardroumli",
+      "email": "siad.ardroumli@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "symfony/framework-standard-edition": "~2.7",
+    "friendsofsymfony/rest-bundle": "~1.7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "squizlabs/php_codesniffer": "^2.3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "MehrAlsNix\\Zebra\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MehrAlsNix\\Test\\Zebra\\": "test/"
+    }
+  }
+}
