@@ -1,0 +1,11 @@
+zebra_ui:
+    path: /
+    defaults: { _controller: ZebraBundle:Default:index }
+
+zebra_rest_entries:
+    type: rest
+    resource: "@ZebraBundle/Resources/config/entries_routes.yml"
+
+crud:
+     resource: "@ZebraBundle/Controller/"
+     type:     annotation
