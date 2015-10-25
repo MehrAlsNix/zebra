@@ -8,6 +8,9 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ZebraBundle:Default:index.html.twig', array('name' => "Peter"));
+        return $this->render(
+            'ZebraBundle:Default:index.html.twig', 
+            ['name' => "Peter"]
+        );
     }
 }

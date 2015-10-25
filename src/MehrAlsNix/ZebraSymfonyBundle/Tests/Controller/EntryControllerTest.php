@@ -19,7 +19,7 @@ class EntryControllerTest extends WebTestCase
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'mehralsnix_symfonybundle_entry[field_name]'  => 'Test',
+            'mehralsnix_zebrasymfonybundle_entry[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class EntryControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Update')->form(array(
-            'mehralsnix_symfonybundle_entry[field_name]'  => 'Foo',
+            'mehralsnix_zebrasymfonybundle_entry[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 

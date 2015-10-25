@@ -21,7 +21,13 @@ class Entry
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
+/**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="datetime", type="datetimetz")
+     */
+    private $datetime;
+    
     /**
      * @var string
      *
@@ -110,5 +116,31 @@ class Entry
     {
         return $this->media;
     }
+
+    
+    /**
+     * Set datetime
+     *
+     * @param \DateTime $datetime
+     *
+     * @return Media
+     */
+    public function setDatetime($datetime)
+    {
+        $this->datetime = $datetime;
+
+        return $this;
+    }
+
+    /**
+     * Get datetime
+     *
+     * @return \DateTime
+     */
+    public function getDatetime()
+    {
+        return $this->datetime;
+    }
+
 }
 

@@ -36,6 +36,11 @@ class EntriesController extends FOSRestController
         return $this->handleView($view);
     }
 
+    /**
+     * 
+     * @return type
+     * @throws \Exception
+     */
     public function postEntryAction()
     {
 
@@ -43,6 +48,10 @@ class EntriesController extends FOSRestController
         $name = $request->get('name');
         $description = $request->get('description');
 
+        if (empty($name) || empty($description)) {
+            throw new \Exception('insufficant data !');
+        }
+        
         $doctrine = $this->getDoctrine();
         $entry = new Entry();
         $entry->setName($name);
