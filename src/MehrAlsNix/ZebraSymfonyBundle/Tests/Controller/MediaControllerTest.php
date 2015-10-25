@@ -1,6 +1,6 @@
 <?php
 
-namespace MehrAlsNix\SymfonyBundle\Tests\Controller;
+namespace MehrAlsNix\ZebraSymfonyBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

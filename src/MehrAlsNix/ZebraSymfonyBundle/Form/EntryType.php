@@ -1,6 +1,6 @@
 <?php
 
-namespace MehrAlsNix\SymfonyBundle\Form;
+namespace MehrAlsNix\ZebraSymfonyBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -26,7 +26,7 @@ class EntryType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'MehrAlsNix\SymfonyBundle\Entity\Entry'
+            'data_class' => 'MehrAlsNix\ZebraSymfonyBundle\Entity\Entry'
         ));
     }
 
@@ -35,6 +35,6 @@ class EntryType extends AbstractType
      */
     public function getName()
     {
-        return 'mehralsnix_symfonybundle_entry';
+        return 'mehralsnix_zebrasymfonybundle_entry';
     }
 }

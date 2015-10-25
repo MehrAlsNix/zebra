@@ -1,6 +1,6 @@
 <?php
 
-namespace MehrAlsNix\SymfonyBundle\Entity;
+namespace MehrAlsNix\ZebraSymfonyBundle\Entity;
 
 /**
  * EntryRepository

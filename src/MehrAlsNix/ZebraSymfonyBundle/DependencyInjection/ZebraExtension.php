@@ -1,6 +1,6 @@
 <?php
 
-namespace MehrAlsNix\SymfonyBundle\DependencyInjection;
+namespace MehrAlsNix\ZebraSymfonyBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

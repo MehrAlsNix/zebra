@@ -1,6 +1,6 @@
 <?php
 
-namespace MehrAlsNix\SymfonyBundle\Entity;
+namespace MehrAlsNix\ZebraSymfonyBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Entry
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="MehrAlsNix\SymfonyBundle\Entity\EntryRepository")
+ * @ORM\Entity(repositoryClass="MehrAlsNix\ZebraSymfonyBundle\Entity\EntryRepository")
  */
 class Entry
 {

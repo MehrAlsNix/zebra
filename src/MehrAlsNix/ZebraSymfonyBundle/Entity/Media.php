@@ -1,6 +1,6 @@
 <?php
 
-namespace MehrAlsNix\SymfonyBundle\Entity;
+namespace MehrAlsNix\ZebraSymfonyBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Media
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="MehrAlsNix\SymfonyBundle\Entity\MediaRepository")
+ * @ORM\Entity(repositoryClass="MehrAlsNix\ZebraSymfonyBundle\Entity\MediaRepository")
  */
 class Media
 {
@@ -38,7 +38,7 @@ class Media
     /**
      * @var Entry
      *
-     * @ORM\ManyToOne(targetEntity="MehrAlsNix\SymfonyBundle\Entity\Entry", inversedBy="media")
+     * @ORM\ManyToOne(targetEntity="MehrAlsNix\ZebraSymfonyBundle\Entity\Entry", inversedBy="media")
      * @ORM\JoinColumn(name="entry_id", referencedColumnName="id")
      */
     private $entry;

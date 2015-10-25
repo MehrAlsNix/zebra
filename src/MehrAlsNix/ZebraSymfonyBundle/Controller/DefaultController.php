@@ -1,6 +1,6 @@
 <?php
 
-namespace MehrAlsNix\SymfonyBundle\Controller;
+namespace MehrAlsNix\ZebraSymfonyBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

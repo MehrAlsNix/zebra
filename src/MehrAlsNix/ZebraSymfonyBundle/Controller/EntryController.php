@@ -1,14 +1,14 @@
 <?php
 
-namespace MehrAlsNix\SymfonyBundle\Controller;
+namespace MehrAlsNix\ZebraSymfonyBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use MehrAlsNix\SymfonyBundle\Entity\Entry;
-use MehrAlsNix\SymfonyBundle\Form\EntryType;
+use MehrAlsNix\ZebraSymfonyBundle\Entity\Entry;
+use MehrAlsNix\ZebraSymfonyBundle\Form\EntryType;
 
 /**
  * Entry controller.

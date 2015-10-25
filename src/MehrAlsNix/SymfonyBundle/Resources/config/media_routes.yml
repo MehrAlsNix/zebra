@@ -1,4 +1,0 @@
-media:
-    type:     rest
-    resource: MehrAlsNix\SymfonyBundle\Controller\MediaController
-

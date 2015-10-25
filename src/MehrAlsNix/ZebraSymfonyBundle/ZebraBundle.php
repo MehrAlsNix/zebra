@@ -1,6 +1,6 @@
 <?php
 
-namespace MehrAlsNix\SymfonyBundle;
+namespace MehrAlsNix\ZebraSymfonyBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

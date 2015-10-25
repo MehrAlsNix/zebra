@@ -1,0 +1,10 @@
+entry:
+    type:     rest
+    resource: MehrAlsNix\ZebraSymfonyBundle\Controller\EntriesController
+
+media:
+    type:     rest
+    parent: entry
+    resource: MehrAlsNix\ZebraSymfonyBundle\Controller\MediaController
+
+

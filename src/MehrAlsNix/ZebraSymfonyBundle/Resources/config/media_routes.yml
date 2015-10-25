@@ -1,0 +1,4 @@
+media:
+    type:     rest
+    resource: MehrAlsNix\ZebraSymfonyBundle\Controller\MediaController
+
