@@ -2,16 +2,16 @@
 
 namespace MehrAlsNix\ZebraSymfonyBundle\Controller;
 
+use Exception;
 use FOS\RestBundle\Controller\FOSRestController;
 use MehrAlsNix\ZebraSymfonyBundle\Entity\Entry;
+use MehrAlsNix\ZebraSymfonyBundle\TimeLineService;
 
 class EntriesController extends FOSRestController
 {
     public function getEntriesAction()
     {
-        $doctrine = $this->getDoctrine();
-        $entries = $doctrine->getRepository('MehrAlsNix\ZebraSymfonyBundle\Entity\Entry')->findAll();
-
+        $entries = $this->getTimeLineService()->getEntries();
         $view = $this->view($entries, 200)
             ->setTemplate("ZebraBundle:Entries:list.html.twig")
             ->setTemplateVar('entries')
@@ -23,8 +23,7 @@ class EntriesController extends FOSRestController
 
     public function getEntryAction($id)
     {
-        $doctrine = $this->getDoctrine();
-        $entry = $doctrine->getRepository('MehrAlsNix\ZebraSymfonyBundle\Entity\Entry')->find($id);
+        $entry = $this->getTimeLineService()->getEntryById($id);
 
         $view = $this->view($entry, 200)
             ->setTemplate("ZebraBundle:Entries:entry.html.twig")
@@ -39,7 +38,7 @@ class EntriesController extends FOSRestController
     /**
      * 
      * @return type
-     * @throws \Exception
+     * @throws Exception
      */
     public function postEntryAction()
     {
@@ -49,16 +48,20 @@ class EntriesController extends FOSRestController
         $description = $request->get('description');
 
         if (empty($name) || empty($description)) {
-            throw new \Exception('insufficant data !');
+            throw new Exception('insufficant data !');
         }
         
-        $doctrine = $this->getDoctrine();
-        $entry = new Entry();
-        $entry->setName($name);
-        $entry->setDescription($description);
-        $doctrine->getManager()->persist($entry);
-        $doctrine->getManager()->flush();
+        $entry = $this->getTimeLineService()->createNewEntry($name, $description);
 
-        return $this->redirectToRoute('get_entries');
+        return $this->redirectToRoute('get_entry', ['id' => $entry->getId()]);
+    }
+    
+    /**
+     * 
+     * @return TimeLineService
+     */
+    private function getTimeLineService()
+    {
+        return $this->get('zebra.timelineService');
     }
 }

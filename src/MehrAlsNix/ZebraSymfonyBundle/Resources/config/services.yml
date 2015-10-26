@@ -2,3 +2,6 @@ services:
 #    zebra.example:
 #        class: MehrAlsNix\SymfonyBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+    zebra.timelineService:
+        class: MehrAlsNix\ZebraSymfonyBundle\TimeLineService
+        arguments: [@doctrine]
